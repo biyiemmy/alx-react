@@ -1,46 +1,38 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+const path = require("path");
 
 module.exports = {
-    mode: 'production',
-    entry: './js/dashboard_main.js',
+    mode: "production",
+    entry: {
+        main: path.resolve(__dirname, "./js/dashboard_main.js"),
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, "public"),
+        filename: "bundle.js",
+    },
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000,
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(gif|png|jp?g|svg)$/i,
                 use: [
+                    "file-loader",
                     {
-                        loader: 'file-loader',
+                        loader: "image-webpack-loader",
                         options: {
-                            outputPath: 'images',
+                            bypassOnDebug: true,
+                            disable: true,
                         },
                     },
-                    'image-webpack-loader',
                 ],
             },
         ],
     },
-    optimization: {
-        minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-        }),
-        new MiniCssExtractPlugin
-            ({
-                filename: 'styles.css',
-            }),
-    ],
 };
