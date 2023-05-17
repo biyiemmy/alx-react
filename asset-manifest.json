@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/css/main.8c8c689b.css",
+    "main.js": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/js/main.537af98d.js",
+    "static/js/787.545aecf5.chunk.js": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/js/787.545aecf5.chunk.js",
+    "static/media/holberton-logo.jpg": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/media/holberton-logo.24bab5d633e36ca8d17e.jpg",
+    "index.html": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/index.html",
+    "main.8c8c689b.css.map": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/css/main.8c8c689b.css.map",
+    "main.537af98d.js.map": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/js/main.537af98d.js.map",
+    "787.545aecf5.chunk.js.map": "/biyiemmy/alx-react/tree/main/0x01-react_intro/task_4/dashboard/static/js/787.545aecf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c8c689b.css",
+    "static/js/main.537af98d.js"
+  ]
+}
