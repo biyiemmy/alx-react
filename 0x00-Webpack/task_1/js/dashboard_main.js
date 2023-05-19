@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import debounce from 'lodash/debounce';
+import _ from 'lodash';
 
 // Create and append the required elements
 const elements = [
@@ -15,7 +15,7 @@ $('body').append(elements);
 // Function to update the counter
 let count = 0;
 
-const updateCounter = debounce(() => {
+const updateCounter = _.debounce(() => {
     count += 1;
     $('#count').text(`${count} clicks on the button`);
 }, 300);
