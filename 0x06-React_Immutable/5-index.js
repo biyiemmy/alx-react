@@ -1,4 +1,4 @@
-import { concatedElements, mergeElements } from "./5-merge.js";
+import { concatElements, mergeElements } from "./5-merge.js";
 
 const array1 = ['Amanda', 'Larry'];
 const array2 = ['Jason', 'Amanda'];
@@ -14,7 +14,7 @@ const object2 = {
     6: 'Lucas',
 };
 
-const concated = concatedElements(array1, array2);
+const concated = concatElements(array1, array2);
 console.log(concated);
 console.log(concated.toJS());
 
