@@ -1,4 +1,4 @@
-const getImmutableObject = require('./0-fromjs');
+import getImmutableObject from './0-fromjs.js';
 
 const object = {
   fear: true,
@@ -7,5 +7,4 @@ const object = {
   thing: -914767132
 };
 
-const immutableMap = getImmutableObject(object);
-console.log(immutableMap);
+console.log(getImmutableObject(object));
