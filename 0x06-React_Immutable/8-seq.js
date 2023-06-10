@@ -9,7 +9,7 @@ export default function printBestStudents(object) {
     return {
       ...student,
       firstName,
-      lastName
+      lastName,
     };
   });
 
