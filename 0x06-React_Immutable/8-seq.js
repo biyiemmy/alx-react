@@ -4,17 +4,21 @@ export default function printBestStudents(object) {
   const seq = Seq(object);
 
   const filtered = seq.filter((student) => {
-    const firstName = student.firstName.charAt(0).toUpperCase() + student.firstName.slice(1);
-    const lastName = student.lastName.charAt(0).toUpperCase() + student.lastName.slice(1);
-    const updatedStudent = {
-      ...student,
-      firstName,
-      lastName,
-    };
-    return updatedStudent.score > 70;
+    student.firstName.charAt(0).toUpppercase();
+    return student.score > 70;
   });
 
+  function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   const JSObject = filtered.toJS();
+
+  Object.keys(JSObject).map((key) => {
+    JSObject[key].firstName = capFirstLetter(JSObject[key].firstName);
+    JSObject[key].lastName = capFirstLetter(JSObject[key].lastName);
+    return JSObject[key];
+  });
 
   console.log(JSObject);
 }
